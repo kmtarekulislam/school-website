@@ -125,7 +125,7 @@
 			HEADER SECTION
 --------------------------------------------------*/
 	#header{
-		background-color: var(--secondarydk);
+		background-color: #04172f;
 		padding-top: 0;
 		padding-bottom: 0;
 		position: fixed;
@@ -219,7 +219,7 @@
 			HERO SECTION
 --------------------------------------------------*/
 	#hero{
-		background-color: var(--secondarybg);
+		background-color: #072f5f;
 		padding-top: 60px;
 		margin-top: -60px;
 		padding-bottom: 50px;
