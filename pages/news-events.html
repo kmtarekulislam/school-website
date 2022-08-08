@@ -1,0 +1,265 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DHM || News & Events </title>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Darul Hikmah Madrasha is a Islamic educational organization and it is approved by the government of the people’s republic of Bangladesh; which has been working as an education mission since 2014.">   
+	<meta name="keywords" content="dhm, dhm.com, Darul Hikmah Madrasha in Bangladesh, BD cadate madrasha list, list of education board, Bangaldesh madrasha education board, top listed Madrasha of chattogram, best madrasha of chattogram, dhm, darul hikmah, darul hikmah news, dhm.com, popular madrasah ">	
+	
+	<link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+
+    <?php include('_source-files.php'); ?>
+</head>
+<body>
+
+
+
+<div class="container sticky-top bg-white">
+	<div class="row w-100">
+		<div class="col-lg-3 p-0">
+        <img class="w-100 m-0" src="upload/page-banner.png" class="Page Banner">            
+		</div>
+
+		<div class="col-lg-9">
+			<div class="main_navbar">
+				<div id="cssmenu"><div id="menu-button">Menu</div>
+		  			<ul>
+		    			<li class="pt-2"><a href="index.php"><span>হোম</span></a></li>		
+              <li class="pt-2"><a href="admission-info.php"><span>ভর্তির তথ্য</span></a></li>
+		    			<li class="has-sub pt-2"><a href="#"><span>শিক্ষা বিষয়ক</span></a>
+                <ul>
+                  <li><a href="syllabus.php"><span>সিলেবাস</span></a></li>
+                  <li><a href="booklist.php"><span>বুকলিস্ট</span></a></li>
+                  <li><a href="exam-routine.php"><span>পরীক্ষার রুটিন</span></a></li>
+                  <li><a href="exam-result.php"><span>পরীক্ষার ফলাফল</span></a></li>
+                </ul>
+						</li>
+		          		<li class="pt-2 bg-s2"  style="border-bottom: 3px solid red;"><a href="news-events.php"><span>ইভেন্টস</span></a></li> 
+		          		<li class="has-sub pt-2"><a href="#"><span>গ্যালারি</span></a>
+			              <ul>
+			                  <li><a href="photo-gallary.php"><span>ফটো গ্যালারি</span></a></li>
+			                  <li><a href="video-gallary.php"><span>ভিডিও গ্যালারি</span></a></li>
+			                </ul>
+		        		</li>
+				        <li class="pt-2"><a href="notice-board.php"><span>নোটিশ বোর্ড</span></a></li>
+				        <li class="pt-2"><a href="#"><span>আমাদের সম্পর্কে</span></a></li>
+		  			</ul>
+					</div>
+				</div>	
+			</div>
+		</div>  
+	</div><!-----close container----->
+
+
+
+  <!-----page title----->
+  <div class="container page-title">
+		<div id="dim-bg" class="fc-s1">
+      নিউজ এবং ইভেন্টস 
+		</div>		
+	</div>
+
+
+
+  <!-----main body starts-----> 
+	<div class="container mt-2 p-0">
+    	<div class="row">
+        <!---left row 1----->
+      		<div class="col-lg-8">
+            <?php
+              include('config/connection.php');
+              $query = mysqli_query($conn, "SELECT * FROM news_events ORDER BY id DESC LIMIT 10 ");
+              if(mysqli_num_rows($query) > 0){
+                while ($row = mysqli_fetch_array($query)) {
+                  echo '
+                    <div class="row shadow ml-0 rounded mb-3">
+                      <div class="col-md-6">
+                        <img src="upload-events/'.$row["pdf_link"].'" class="w-100 rounded my-3">
+                      </div>
+                      <div class="col-md-6 text-justify pr-3 pl-0" style=" line-height: 120%;">
+                        <div style="border-bottom: 2px solid red; font-weight: bold; margin-top: 20px; margin-bottom:5px;">'.$row["title_nm"].'</div>
+                            '.$row["description"].'
+                      </div>
+                    </div>';
+                }
+              }else{
+                  echo '';                
+              } ?>    
+      		</div><!-------end left column----->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      		<!-----right column----->
+      		<div class="col-md-4">
+            <div id="right-column-box">
+                <div id="box-title">আমাদের ইউটিউব চ্যানেল <span class="float-right mr-2 text-danger"><i class="fab fa-youtube"></i></span></div>
+                <div id="message" class="bg-s1"> 
+                  <iframe class="img-thumbnail" src="https://www.youtube.com/embed/Zupb6wE2sYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <div id="iframe-title">টিভি প্রোগ্রাম - ২০২০  ।<a href="" class="link ml-2">বিস্তারিত..</a>  
+                    </div>                  
+              </div> 
+            </div>  
+
+            <div id="right-column-box">
+                <div id="box-title" class="text-left pl-2"> আমাদের ফেসবুক পেজ <span class="float-right mr-2 text-primary"><i class="fab fa-facebook-square"></i></span></div>
+                <div id="message" class="bg-s1">
+                  <a href=""><img class="img-thumbnail" src="upload/facebook.png"></a>
+                    <div id="iframe-title">জাতীয় টিভি প্রোগ্রাম - ২০২০  ।<a href="" class="link ml-2">বিস্তারিত..</a></div>
+                  </div>                  
+            </div>  
+
+            <div id="right-column-box">
+                <div id="box-title" class="text-left pl-2"> গুরুত্বপূর্ণ লিংক <span class="float-right mr-2 text-primary"><i class="fab fa-chain"></i></span></div>
+                <div id="message" class="bg-s1">
+                  <ul id="links">
+                      <li><a href="http://bmeb.ebmeb.gov.bd/" target="_blank"> বাংলাদেশ মাদ্‌রাসা শিক্ষা বোর্ড</a></li>
+                      <li><a href="https://play.google.com/store/apps/details?id=com.tm.primaryeducation" target="_blank" > প্রাথমিক শিক্ষা অধিদপ্তরের মোবাইল অ্যাপস।</a></li>
+                      <li><a href="http://www.dpe.gov.bd/" target="_blank" > প্রাথমিক শিক্ষা অধিদপ্তর</a></li>
+                      <li><a href="http://www.islamicfoundation.gov.bd/" target="_blank" > ইসলামিক ফাউন্ডেশন</a></li>
+                      <li><a href="http://www.shikkhok.com/" target="_blank" > শিক্ষক (বাংলায় জ্ঞানের মেলা)</a></li>
+                      <li><a href="https://mopme.gov.bd/" target="_blank" > প্রাথমিক ও গনশিক্ষা মন্ত্রনালয়</a></li>
+                      <li><a href="http://pesp.gov.bd/" target="_blank" > প্রাথমিক শিক্ষার জন্য উপবৃত্তি প্রকল্প</a></li>
+                      <li><a href="http://digitalcontent.ictd.gov.bd/" target="_blank" > প্রাথমিক শিক্ষা ডিজিটাল কনটেন্ট</a></li>                      
+                  </ul>                  
+              </div> 
+            </div>
+
+            <div id="right-column-box">
+                <div id="box-title" class="text-left pl-2"> শেয়ার করুন</div>
+                <div id="message" class="bg-s1">
+                  <div class="d-flex justify-content-between">
+                      <div class="bd-highlight"><a href=""><img src="images/fb.png"></a></div>
+                      <div class="bd-highlight"><a href=""><img src="images/tt.png"></a></div>
+                      <div class="bd-highlight"><a href=""><img src="images/g+.png"></a></div>
+                      <div class="bd-highlight"><a href=""><img src="images/pin.png"></a></div>
+                      <div class="bd-highlight"><a href=""><img src="images/inst.png"></a></div>
+                      <div class="bd-highlight"><a href=""><img src="images/yt.png"></a></div>
+                      <div class="bd-highlight"><a href=""><img src="images/in.png"></a></div>                
+                  </div>                  
+                </div> 
+            </div> 
+
+
+
+
+
+
+      		</div><!-----end right column----->
+      	</div><!-----end row 1----->
+  	</div><!-----end container----->
+
+
+
+  	<footer>
+      	<div class="container">
+        	<div class="row pt-3">
+          		<div class="col-sm-3">
+            		<div class="container">        
+              			<a href="about-us.php"><h5>ABOUT US</h5></a>   
+                    <hr id="divider">  
+              			<h6>Darul Hikmah Madrasah</h6>                    
+                    <hr id="divider">  
+                    <p style="text-align: justify;">
+                			We are the specialized institute to develop your child future. Darul Hikmah Madrasah was established in 2014 with a view to develop a educated nation in Bangladesh. We are going to try our best to educate our innocent children with great satisfaction</p>
+                		<p>
+                    <hr id="divider">  
+              		</div>
+            	</div>
+
+
+            	<!-----column 2 ----->
+          		<div class="col-sm-3">
+            		<div class="container">
+                		<a href="about-us.php"><h5>CONTACT US</h5></a>
+                    <hr id="divider">  
+                		<h6>We are in Chittagong</h6>
+                    <hr id="divider">  
+                		<p><i class="fas fa-map-marker-alt"></i> Taher Bhaban, Navy Hospital Gate, EPZ, Chittagong.</p>
+                    <hr id="divider">  
+                  		<p><i class="fas fa-phone-volume"></i> 031-652237, 01860602020</p>
+                    <hr id="divider">  
+                    	<p><i class="far fa-envelope"></i> darulhikmahctg@gmail.com</p>
+                    <hr id="divider">  
+              		</div>
+            	</div>
+
+
+            	<!-----column 3 ----->
+          		<div class="col-sm-3">
+            		<div class="container">
+              			<h5>OFFICE HOURS</h5>
+                    <hr id="divider">  
+		              	<ul>
+		                	<li><span class="title">Weekdays </span><span class="hours">08am - 08pm</span></li>
+                    <hr id="divider">  
+		                	<li><span class="title">Weekends </span><span class="hours">10am - 08pm</span></li>
+                    <hr id="divider">  
+		                	<li><span class="title">Holidays </span><span class="hours">10am - 08pm</span></li>
+                    <hr id="divider">  
+		                	<li><span class="title">Friday </span><span class="hours"><em>Closed</em></span></li>
+                    <hr id="divider">  
+		                	<li><span class="title">Hifz </span><span class="hours"> 7/24Hours</span></li>
+                    <hr id="divider">  
+		              	</ul>
+            		</div>
+          		</div>
+
+            	<!-----column 4 ----->
+          		<div class="col-sm-3">
+            		<div class="container">
+              			<h5 class="text-center">POWERED BY</h5>
+                    <hr id="divider">  
+              			<div class="text-center">
+                			<img src="images/abacus.jpg" style="height: 50px;">
+                			<p>Abacus Software Network</p>
+                    <hr id="divider">  
+              			</div>
+              
+                		<p><i class="fas fa-map-marker-alt"></i> Taher Bhaban, Navy Hospital Gate, EPZ, Chittagong.</p>
+                    <hr id="divider">  
+                		<p><i class="fas fa-phone-volume"></i> 031-652237, 01860602020</p>
+                    <hr id="divider">  
+
+                		<p><i class="far fa-envelope"></i> networkabacus@gmail.com</p>
+                    <hr id="divider">  
+            		</div>
+          		</div>          
+	        </div><!----- end row ----->
+	    </div><!----- end container ----->  
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+  <script type="text/javascript">
+
+
+
+  </script>

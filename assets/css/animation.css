@@ -1,0 +1,122 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*----------------------------------------
+    up & down countinuous animation
+----------------------------------------*/
+.animation-up-down {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+
+
+
+/*----------------------------------------
+    scroll to animation
+----------------------------------------*/
+
+    .scrolltoU{
+        position: relative;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .scrolltoU.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .scrolltoD{
+        position: relative;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .scrolltoD.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+    .scrolltoL{
+        position: relative;
+        transform: translateX(150px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .scrolltoL.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+    .scrolltoR{
+        position: relative;
+        transform: translateX(-150px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .scrolltoR.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .scrolltoZoom{
+        position: relative;
+        transform: scale(0.1); 
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .scrolltoZoom.active{
+        transform: scale(1); 
+        opacity: 1;
+    }
+
+
+
+
+
+/*----------------------------------------
+    mouse hover zoom in
+----------------------------------------*/
+
+.zoom-in {
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.zoom-in:hover {
+    transform: scale(1.1); /*-- zoom in 120% --*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" /* IE 8+ */;
+    filter: none !important; /* IE 7 and the rest of the world */
+}
+
+.bubble-up{ 
+    cursor: pointer; 
+    transition: all transform .2s;
+}
+.bubble-up:hover{ 
+    margin-top: -10px; 
+}

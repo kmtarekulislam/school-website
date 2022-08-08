@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!----- META ----->
+    <meta charset="utf-8">
+    <meta name="author" content="WDD SCHOOL">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+    <!--[if lt IE 9]> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+
+    <title>DHM || Booklist</title> 
+
+	<meta name="Description" content="Darul Hikmah Madrasha is a Islamic educational organization and it is approved by the government of the people’s republic of Bangladesh; which has been working as an education mission since 2014.">   
+	<meta name="keywords" content="dhm, dhm.com, Darul Hikmah Madrasha in Bangladesh, BD cadate madrasha list, list of education board, Bangaldesh madrasha education board, top listed Madrasha of chattogram, best madrasha of chattogram, dhm, darul hikmah, darul hikmah news, dhm.com, popular madrasah ">	
+
+	<link rel="shortcut icon" href="../images/brand/logo.png" type="image/icon">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/marquee-img.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/marquee.css">
+
+    <!----- FONTAWESOME CSS----->
+    <link rel="stylesheet" type="text/css" href="../assets/fontawesome/css/all.min.css">
+
+
+    <!----- BOOTSTRAP4 CSS----->
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap4/css/bootstrap.min.css">
+
+
+
+    <!----- JQUERY CSS----->
+    <link rel="stylesheet" type="text/css" href="../assets/jquery/css/jquery-ui.css">
+
+
+    <!----- CUSTOM CSS ----->
+    <link rel="stylesheet" type="text/css" href="../assets/css/animation.css">      
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-face.css">  
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/scss/_root.scss">
+    
+  <style type="text/css">
+
+
+
+  </style>
+
+</head>
+<body>
+
+    <!-----HEADER SECTION ----->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="../index.php">
+                    <img src="../images/brand/logo.png" alt="Darul Hikmah Madrasah">
+                    <span>DARUL HIKMAH MADRASAH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-light"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admission-info.php">Admission</a>
+                        </li>  
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Organization </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="about-us.php">About Us</a>
+                                <a class="dropdown-item" href="teachers-list.php">Teahcers List</a>
+                                <a class="dropdown-item" href="governing-body.php">Governing Body</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Academic </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="syllabus.php">Syllabus</a>
+                                <a class="dropdown-item active" href="booklist.php">Booklist</a>
+                                <a class="dropdown-item" href="exam-routine.php">Exam Routine</a>
+                                <a class="dropdown-item" href="exam-result.php">Exam Result</a>
+                            </div>
+                        </li>  
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Gallery </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="photo-gallery.php">Photo Gallery</a>
+                                <a class="dropdown-item" href="video-gallery.php">Video Gallery</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="notice-board.php">Notice Board</a>
+                        </li>  
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <!-----PAGE HEADER ----->
+    <section id="page-header" class="py-lg-4 py-mb-2 py-sm-1">
+        <div class="container">
+            <div id="page-title">
+                <h2> পাঠ্যবই সূচী/ বুকলিস্ট </h2>
+                <!-- <p> </p>  -->
+            </div>            
+        </div>       
+    </section>
+
+
+
+
+
+    <!-----NOTICE BOARD ----->
+    <section id="about-us">
+        <div class="container">
+            <h4 class="text-center mb-3"><u></u></h4>
+            <table class="table table-striped w-100">
+                <thead>
+                    <tr>
+                        <th width="20%" class="text-center">তারিখ</th>
+                        <th width="60%">বুকলিস্টের বর্ণনা </th>
+                        <th width="20%" class="text-center">ডাউনলোড</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <?php
+                            include ('../config/connection.php');
+                            $qry1 = mysqli_query($conn, "SELECT * FROM booklist ORDER BY id DESC");
+                            while ($d = mysqli_fetch_array($qry1)) {
+                                echo '<tr>
+                                    <td class="text-center">'.date($d["entry_dt"]).'</td>
+                                    <td style="font-size: 120%;">'.$d['description'].'</td>
+                                    <td class="text-center">
+                                        <a href="../images/syllabus-img/'.$d['pdf_link'].'" target="blank">
+                                        <img class="img-thumbnail" style="width: 40px;" src="../images/pdf-icon.png"></a>
+                                    </td>
+                                </tr>';
+                            }
+                        ?>
+                </tbody>
+            </table>          
+        </div>       
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-----FOOTER SECTION ----->
+  	<footer>
+      	<div class="container">
+        	<div class="row">
+          		<div class="col-sm-3">
+          			<h5 class="text-center">DARUL HIKMAH MADRASAH</h5>
+                    <div class="text-center">
+                        <img id="logo" src="../images/brand/logo.png">
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Navy Hospital Gate, CEPZ</p>
+                    <p><i class="fas fa-phone-volume"></i> 031-652237, 01860602020</p>
+                    <p><i class="far fa-envelope"></i> darulhikmahctg@gmail.com</p> 
+                    
+                    <h5 class="text-left mt-4">OUR SOCIAL NETWORKS</h5>
+
+                    <div id="social-icons">                 
+                        <a href="https://www.facebook.com/abacussms" target="blank" id="facebook" class="mr-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.instagram.com" target="blank" id="instagram" class="mr-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.twitter.com" target="blank" id="twitter" class="mr-3"><i class="fab fa-twitter-square fa-2x"></i></a><a href="#" target="blank" id="google-plus" class="mr-3"><i class="fab fa-google-plus-square fa-2x"></i></a>
+                        <a href="https://www.linkdin.com" target="blank" id="linkedin" class="mr-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>               
+            	</div>
+
+            	<!-----column 2 ----->
+          		<div class="col-sm-3">
+            		<div class="container">
+              			<h5>OFFICE HOURS</h5>
+		              	<ul>
+		                	<li><span class="title">Weekdays </span><span class="hours">08am - 08pm</span></li>
+		                	<li><span class="title">Weekends </span><span class="hours">10am - 08pm</span></li>
+		                	<li><span class="title">Holidays </span><span class="hours">10am - 08pm</span></li>
+		                	<li><span class="title">Friday </span><span class="hours"><em>Closed</em></span></li>
+		                	<li><span class="title">Hifz </span><span class="hours"> 7/24Hours</span></li>
+		              	</ul>
+            		</div>
+          		</div>
+
+
+
+                <!-----column 3 ----->
+                <div class="col-sm-3">
+                    <div class="container">
+                        <h5>USEFULL LINKS</h5>
+                        <ul>
+                            <li><a href="http://bmeb.ebmeb.gov.bd/" target="_blank"> বাংলাদেশ মাদ্‌রাসা শিক্ষা বোর্ড</a></li>
+                            <li><a href="http://www.dpe.gov.bd/" target="_blank" > প্রাথমিক শিক্ষা অধিদপ্তর</a></li>
+                            <li><a href="http://www.islamicfoundation.gov.bd/" target="_blank" > ইসলামিক ফাউন্ডেশন</a></li>
+                            <li><a href="http://www.shikkhok.com/" target="_blank" > শিক্ষক (বাংলায় জ্ঞানের মেলা)</a></li>
+                            <li><a href="https://mopme.gov.bd/" target="_blank" > প্রাথমিক ও গনশিক্ষা মন্ত্রনালয়</a></li>
+                            <li><a href="http://pesp.gov.bd/" target="_blank" > প্রাথমিক শিক্ষার জন্য উপবৃত্তি প্রকল্প</a></li>
+                            <li><a href="http://digitalcontent.ictd.gov.bd/" target="_blank" > প্রাথমিক শিক্ষা ডিজিটাল কনটেন্ট</a></li>                         
+                        </ul>
+                        
+                    </div>
+                </div>
+
+            	<!-----column 4 ----->
+          		<div class="col-sm-3">
+            		<div class="container">
+              			<h5 class="text-center">POWERED BY</h5>
+              			<div class="text-center">
+                			<img id="logo" src="../images/wdd/wdd-logo.png">
+                			<p>WDD SCHOOL</p>
+              			</div>              
+                		<p><i class="fas fa-map-marker-alt"></i> Navy Welfare Market, Chittagong.</p>
+                		<p><i class="fas fa-phone-volume"></i> 031-652237, 01860602020</p>
+                		<p><i class="far fa-envelope"></i> wddschool@gmail.com</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="https://www.facebook.com/abacussms" target="blank" id="facebook" class="mr-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.instagram.com" target="blank" id="instagram" class="mr-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.twitter.com" target="blank" id="twitter" class="mr-3"><i class="fab fa-twitter-square fa-2x"></i></a><a href="#" target="blank" id="google-plus" class="mr-3"><i class="fab fa-google-plus-square fa-2x"></i></a>
+                        <a href="https://www.linkdin.com" target="blank" id="linkedin" class="mr-3"><i class="fab fa-linkedin fa-2x"></i></a>               
+                    </div>
+            		</div>
+          		</div>          
+	        </div><!----- end row ----->
+	    </div><!----- end container ----->  
+	</footer>
+
+
+
+
+    <!----- JQUERY JS ----->
+    <!----- jQuery first, then Popper.js, then Bootstrap JS ----->    
+    <script type="text/javascript" src="../assets/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/jquery/js/jquery-ui.js"></script>
+
+    <!----- BOOTSTRAP JS ----->
+    <script type="text/javascript" src="../assets/bootstrap4/js/popper.min.js"></script> 
+    <script type="text/javascript" src="../assets/bootstrap4/js/bootstrap.min.js"></script> 
+
+    <!----- CUSTOM JS ----->
+    <script type="text/javascript" src="../assets/js/marquee-img.js"></script>    
+    <script type="text/javascript" src="../assets/js/animation.js"></script>     
+    <script type="text/javascript" src="../assets/js/marquee.js"></script>
+</body>
+</html>
+
+
+
+
+<script type="text/javascript">
+
+</script>
